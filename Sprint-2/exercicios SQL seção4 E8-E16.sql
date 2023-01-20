@@ -46,6 +46,12 @@ ORDER BY COMISSAO DESC;
 colunas presentes no resultado devem ser cdcli, nmcli e gasto, esta última representando 
 o somatório das vendas (concluídas) atribuídas ao cliente. */
 
+SELECT  VND.CDCLI, VND.NMCLI,
+		SUM(VND.QTD * VND.VRUNT) AS GASTO
+FROM TBVENDAS VND	
+WHERE VND.STATUS = 'Concluído'
+GROUP BY VND.CDCLI, VND.NMCLI
+ORDER BY GASTO DESC LIMIT 1;
 
 
 /* Apresente a query para listar código, nome e data de nascimento dos dependentes do 
