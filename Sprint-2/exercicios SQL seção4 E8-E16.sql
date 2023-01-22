@@ -21,6 +21,7 @@ FROM TBVENDAS
 GROUP BY CDPRO, NMPRO, DTVEN
 ORDER BY CDPRO DESC;
 
+
 /* A comissão de um vendedor é definida a partir de um percentual 
 sobre o total de vendas (quantidade * valor unitário) por ele 
 realizado. O percentual de comissão de cada vendedor
@@ -42,6 +43,7 @@ WHERE VND.STATUS = 'Concluído'
 GROUP BY VDD.NMVDD
 ORDER BY COMISSAO DESC;
 
+
 /* Apresente a query para listar o código e nome cliente com maior gasto na loja. As 
 colunas presentes no resultado devem ser cdcli, nmcli e gasto, esta última representando 
 o somatório das vendas (concluídas) atribuídas ao cliente. */
@@ -59,24 +61,53 @@ vendedor com menor valor total bruto em vendas (não sendo zero). As colunas pre
 resultado devem ser cddep, nmdep, dtnasc e valor_total_vendas.
 Observação: Apenas vendas com status concluído. */
 
+SELECT  DEP.CDDEP, DEP.NMDEP, DEP.DTNASC,
+		SUM(VND.QTD * VND.VRUNT) AS VALOR_TOTAL_VENDAS
+FROM TBVENDAS VND
+	INNER JOIN TBVENDEDOR VDD
+	ON VND.CDVDD = VDD.CDVDD
+		INNER JOIN TBDEPENDENTE DEP
+		ON VDD.CDVDD = DEP.CDVDD
+WHERE VND.STATUS = 'Concluído'
+GROUP BY DEP.CDDEP, DEP.NMDEP, DEP.DTNASC
+ORDER BY VALOR_TOTAL_VENDAS ASC LIMIT 1;
 
 
 /* Apresente a query para listar os 10 produtos menos vendidos pelos canais de E-Commerce
 ou Matriz (Considerar apenas vendas concluídas).  As colunas presentes no resultado 
-devem ser cdpro, nmcanalvendas, nmpro e quantidade_vendas. */
+devem ser cdpro, nmcanalvendas, nmpro e quantidade_vendas. 
+
+CORRIGIR
+*/
+
+SELECT  VND.CDPRO, VND.NMCANALVENDAS, 
+		VND.NMPRO,
+		SUM(VND.QTD) AS QUANTIDADE_VENDAS
+FROM TBVENDAS VND
+WHERE VND.STATUS = 'Concluído'
+GROUP BY VND.CDPRO, VND.NMCANALVENDAS, VND.NMPRO
+ORDER BY QUANTIDADE_VENDAS ASC LIMIT 10;
 
 
-
-/* Apresente a query para listar o gasto médio por estado da federação. As colunas presentes
- no resultado devem ser estado e gastomedio. Considere apresentar a coluna gastomedio 
- arredondada na segunda casa decimal e ordenado de forma decrescente.
+/* Apresente a query para listar o gasto médio por estado da 
+federação. As colunas presentes no resultado devem ser estado 
+e gastomedio. Considere apresentar a coluna gastomedio 
+arredondada na segunda casa decimal e ordenado de forma decrescente.
 Observação: Apenas vendas com status concluído. */
 
+SELECT ESTADO, ROUND(AVG(VND.QTD * VND.VRUNT), 2) AS GASTOMEDIO
+FROM TBVENDAS
+WHERE VND.STATUS = 'Concluído'
+GROUP BY ESTADO
 
 
 /* Apresente a query para listar os códigos das vendas identificadas como deletadas. 
 Apresente o resultado em ordem crescente. */
 
+SELECT CDVEN 
+FROM TBVENDAS
+WHERE DELETADO = 1
+ORDER BY CDVEN ASC;
 
 
 /* Apresente a query para listar a quantidade média vendida de cada produto agrupado por
@@ -85,7 +116,11 @@ quantidade_media. Considere arredondar o valor da coluna quantidade_media na qua
 decimal. Ordene os resultados pelo estado (1º) e nome do produto (2º).
 Observação: Apenas vendas com status concluído. */
 
-
+SELECT  ESTADO, NMPRO, ROUND(AVG(QTD), 4) AS QUANTIDADE_MEDIA
+FROM TBVENDAS
+WHERE STATUS = 'Concluído'
+GROUP BY ESTADO, NMPRO
+ORDER BY ESTADO, NMPRO;
 
 
 
