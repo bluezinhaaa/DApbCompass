@@ -94,6 +94,8 @@ federação. As colunas presentes no resultado devem ser estado
 e gastomedio. Considere apresentar a coluna gastomedio 
 arredondada na segunda casa decimal e ordenado de forma decrescente.
 Observação: Apenas vendas com status concluído. */
+/* query teve o "order by" ajustado depois da dica do monitor e a 
+correção da solução na plataforma  */
 
 SELECT ESTADO, ROUND(AVG(QTD * VRUNT), 2) AS GASTOMEDIO
 FROM TBVENDAS
