@@ -95,10 +95,11 @@ e gastomedio. Considere apresentar a coluna gastomedio
 arredondada na segunda casa decimal e ordenado de forma decrescente.
 Observação: Apenas vendas com status concluído. */
 
-SELECT ESTADO, ROUND(AVG(VND.QTD * VND.VRUNT), 2) AS GASTOMEDIO
+SELECT ESTADO, ROUND(AVG(QTD * VRUNT), 2) AS GASTOMEDIO
 FROM TBVENDAS
-WHERE VND.STATUS = 'Concluído'
+WHERE STATUS = 'Concluído'
 GROUP BY ESTADO
+ORDER BY GASTOMEDIO DESC;
 
 
 /* Apresente a query para listar os códigos das vendas identificadas como deletadas. 
