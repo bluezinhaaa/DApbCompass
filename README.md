@@ -1,4 +1,4 @@
-![barratop](https://raw.githubusercontent.com/bluezinhaaa/DApbCompass/main/barra.png?token=GHSAT0AAAAAAB4WPEDDLIOFLE45VDKMTILUY6N272A)
+![barratop](https://raw.githubusercontent.com/bluezinhaaa/DApbCompass/main/Imagens/barra.png?token=GHSAT0AAAAAAB4WPEDC2J6CMYLJIDPEY3J2Y6PNDKQ)
 # Programa de Bolsas CompassUol 
 
 ## *Data & Analytics - AWS*
