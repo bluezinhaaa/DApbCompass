@@ -172,4 +172,4 @@ Início - 19/12/2022
  
  5. Data & Analytics - PB - AWS 10/10
 
- [def]: img/barra.png 
+ [def]: Img/barra.png 
