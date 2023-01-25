@@ -1,4 +1,5 @@
-![barratop](https://raw.githubusercontent.com/bluezinhaaa/DApbCompass/main/Imagens/barra.png?token=GHSAT0AAAAAAB4WPEDC2J6CMYLJIDPEY3J2Y6PNDKQ)
+![barratop][def]
+
 # Programa de Bolsas CompassUol 
 
 ## *Data & Analytics - AWS*
@@ -170,3 +171,5 @@ Início - 19/12/2022
  4. Amazon QuickSight Learning Series (YouTube)
  
  5. Data & Analytics - PB - AWS 10/10
+
+ [def]: img/barra.png 
