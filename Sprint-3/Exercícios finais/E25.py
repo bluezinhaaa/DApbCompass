@@ -13,16 +13,16 @@
 
 class Aviao:
         
-    def __init__(self, modelo, velocidade_maxima, capacidade, cor = 'Azul'):
+    def __init__(self, modelo, velocidade_maxima, capacidade, cor):
         self._modelo = modelo
         self._velocidade_maxima = velocidade_maxima
-        self._cor = 'Azul'
+        self._cor = cor
         self._capacidade = capacidade
 
 avioes = []
-avioes.append(Aviao("BOIENG456", 1500.0, 400))
-avioes.append(Aviao("Embraer Praetor 600", 863.0, 14))
-avioes.append(Aviao("Antonov An-2", 258.0, 12))
+avioes.append(Aviao("BOIENG456", 1500.0, 400, 'Azul'))
+avioes.append(Aviao("Embraer Praetor 600", 863.0, 14, 'Azul'))
+avioes.append(Aviao("Antonov An-2", 258.0, 12, 'Azul'))
 
 for aviao in avioes:
     print(f"O avião de modelo {aviao._modelo} possui uma velocidade máxima de {aviao._velocidade_maxima}, capacidade para {aviao._capacidade} passageiros e é da cor {aviao._cor}")
