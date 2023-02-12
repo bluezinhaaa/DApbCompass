@@ -11,6 +11,16 @@ Os contúdos estão separados por Sprints, sendo cada uma um período de duas se
 <br>
 Início - 19/12/2022
 
+## Sobre mim
+Meu nome é Bruna Jacom, tenho 37 anos, porto alegrense e moro em Canoas/RS. Atualmente no 2º semestre de Tecnologia em Análise e Desenvolvimento de Sistemas no IFRS Campus Canoas e venho de uma quase formação (7º semestre) em Moda pela Universidade FEEVALE.
+
+Minha relação com tecnologia é tão antiga quanto consigo lembrar. Aos 4 anos eu já "instalava" e operava bem alguns eletrônicos em casa como video cassete e video game mas foi somente aos 9 que tive meu primeiro contato com um computador, um antigo 486 na casa da minha tia. Foi paixão à primeira vista. 
+Aos 13 ganhei meu próprio computador e aos 15 meu primeiro contato singelo com programação web. 
+Acabei desviando meu caminho e indo parar em Moda onde acabei sendo conhecida por ser a colega nerd, já que minha relação com computadores e tecnologia no geral, nunca deixou de ser extremamente próxima.
+Em 2017, durante uma pausa na faculdade, fui selecionada para participar do Rails Girls e acho que ali martelei o prego que faltava no caixão do curso de Moda. Fiz muitas amizades, participei e até organizei outros eventos mas somente no fim de 2019 criei coragem de fazer o vestibular. A pandemia veio, acabei me atrasando e me desmotivando um pouco (foi um período complicado para todos, né?) mas sigo aqui, firme e forte.
+
+Amo séries, tenho mais de 300 livros (talvez eu já esteja mais perto de 400), jogadora de jogos online desde 2004 (mas desde que começou o PB não consigo jogar nada... minha steam deve achar que morri!), recentemente descobri uma paixão por suculentas (em 13/12 eram duas, hoje 12/02 já são 40... socorro) e por fim tenho um lado meio Chandler de Friends, que faz piadinhas quando ta nervosa/ansiosa (além de falar demais). 
+
 
 ## Sprint#1
 19/12/22 a 02/01/23
