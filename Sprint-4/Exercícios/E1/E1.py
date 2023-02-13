@@ -10,10 +10,9 @@
 
 dezmil = []
 dezmil = list(map(int, open(r'number.txt', 'r').read().split()))
-dezmil = sorted(dezmil)
+dezmil = sorted(dezmil, reverse=True)
 dezmil_pares = list(filter(lambda x: (x%2 == 0), dezmil))
-dezmil_pares_rev = list(reversed(dezmil_pares))
-lista = dezmil_pares_rev[0],dezmil_pares_rev[1],dezmil_pares_rev[2],dezmil_pares_rev[3],dezmil_pares_rev[4]
+lista = dezmil_pares[:5]
 print(lista)
 print(sum(lista))
 
